@@ -16,8 +16,10 @@ TebLocalPlannerROS:
   
   max_vel_x: 0.15
   max_vel_x_backwards: 0.11 #0.2 by default
+  max_vel_y: 0.1
   max_vel_theta: 0.2
   acc_lim_x: 0.3
+  acc_lim_y : 0.3
   acc_lim_theta: 0.3
   min_turning_radius: 0.0 # diff-drive robot (can turn on place!)
   
@@ -32,7 +34,7 @@ TebLocalPlannerROS:
   
   # Obstacles
   
-  min_obstacle_dist: 0.2 # This value must also include our robot radius, since footprint_model is set to "point".
+  min_obstacle_dist: 0.25 # This value must also include our robot radius, since footprint_model is set to "point".
   include_costmap_obstacles: True
   costmap_obstacles_behind_robot_dist: 1.0
   obstacle_poses_affected: 30
@@ -60,7 +62,7 @@ TebLocalPlannerROS:
   
   # Homotopy Class Planner
   
-  enable_homotopy_class_planning: True
+  enable_homotopy_class_planning: False
   enable_multithreading: True
   simple_exploration: False
   max_number_classes: 4
